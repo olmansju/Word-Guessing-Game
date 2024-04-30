@@ -1,107 +1,137 @@
 /* Import Google font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-body{
-  display: flex;
-  padding: 0 10px;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  background: #1BB295;
+
+body {
+  background: #b21b6e;
 }
-.wrapper{
-  width: 850px;
+
+.wrapper {
+  width: 90%;
+  max-width: 700px; /* Adjust maximum width for mobile devices */
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin: 90px auto 20px; /* Center the wrapper with space above for high-score-box */
 }
-.wrapper h1{
-  font-size: 40px;
-  font-weight: 750;
-  padding: 20px 25px;
+.high-score-box{
+  text-align: right;
+  font-size: 17px;
+}
+
+.wrapper h1 {
+  font-size: 24px; /* Adjust font size for mobile */
+  font-weight: 700;
+  padding: 20px 0; /* Adjust padding */
   border-bottom: 1px solid #ccc;
-  text-align: center
+  text-align: center;
 }
-.wrapper .content{
-  margin: 25px 25px 35px;
+
+.wrapper .content {
+  margin: 20px 0;
 }
-.content .inputs{
+
+.inputs {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.inputs input{
-  height: 57px;
-  width: 56px;
-  margin: 4px;
-  font-size: 24px;
-  font-weight: 500;
-  color: #1ba98c;
+
+.inputs input {
+  height: 40px; /* Adjust height for mobile */
+  width: 40px; /* Adjust width for mobile */
+  margin: 5px;
+  font-size: 16px; /* Adjust font size for mobile */
   text-align: center;
-  border-radius: 5px;
-  background: none;
-  pointer-events: none;
-  text-transform: uppercase;
-  border: 1px solid #B5B5B5;
+  color: #580031;
+  font-weight: bold;
 }
+
+.score {
+  font-size: 17px; /* Adjust font size for mobile */
+  font-weight: bold;
+  text-align: left;
+}
+
 .typing-input {
   opacity: 0;
   z-index: -999;
   position: absolute;
   pointer-events: none;
 }
-.inputs input:first-child{
-  margin-left: 0px;
+
+.details {
+  margin: 20px 0;
 }
-.content .details{
-  margin: 20px 0 25px;
-}
-.details p{
-  font-size: 19px;
+
+.details p {
+  font-size: 16px; /* Adjust font size for mobile */
   margin-bottom: 10px;
 }
-.content .reset-btn{
+
+.content .reset-btn {
   width: 100%;
   border: none;
   cursor: pointer;
   color: #fff;
   outline: none;
-  padding: 15px 0;
-  font-size: 17px;
+  padding: 12px 0; /* Adjust padding for mobile */
+  font-size: 16px; /* Adjust font size for mobile */
   border-radius: 5px;
-  background: #1BB295;
+  background: #1bb295;
   transition: all 0.3s ease;
 }
-.content .reset-btn:hover{
+
+.content .reset-btn:hover {
   background: #18a589;
 }
+
+/* Media query for screens smaller than 460px */
 @media screen and (max-width: 460px) {
   .wrapper {
-    width: 100%;
+    padding: 15px; /* Adjust padding for smaller screens */
+    margin: 90px auto 20px; /* Adjust margin for smaller screens */
   }
-  .wrapper h1{
-    font-size: 22px;
-    padding: 16px 20px;
+
+  .wrapper h1 {
+    font-size: 20px; /* Adjust font size for smaller screens */
   }
-  .wrapper .content{
-    margin: 25px 20px 35px;
+
+  .inputs input {
+    height: 35px; /* Adjust height for smaller screens */
+    width: 35px; /* Adjust width for smaller screens */
+    margin: 4px;
+    font-size: 14px; /* Adjust font size for smaller screens */
   }
-  .inputs input{
-    height: 51px;
-    width: 50px;
-    margin: 3px;
-    font-size: 22px;
+
+  .score {
+    font-size: 18px; /* Adjust font size for smaller screens */
   }
-  .details p{
-    font-size: 17px;
+
+  .details p {
+    font-size: 14px; /* Adjust font size for smaller screens */
   }
-  .content .reset-btn{
-    padding: 14px 0;
-    font-size: 16px;
+
+  .content .reset-btn {
+    padding: 10px 0; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Adjust font size for smaller screens */
   }
+}
+
+  /* Styles for file-upload */
+.file-upload {
+  background: #1bb295;
+  text-align: center;
+  padding: 10px 15px; /* Adjust padding for mobile */
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
 }

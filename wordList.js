@@ -52,7 +52,7 @@ const wordList = [
         hint: "glasses"
     },
     {
-        word: "GafasDeSol",
+        word: "gafasdesol",
         hint: "sunglasses"
     },
     {
@@ -112,7 +112,7 @@ const wordList = [
         hint: "underwear"
     },
     {
-        word: "MePongo",
+        word: "mepongo",
         hint: "I put on"
     },
     {
@@ -120,7 +120,7 @@ const wordList = [
         hint: "I am wearing"
     },
     {
-        word: "TePones",
+        word: "tepones",
         hint: "You put on"
     },
     {
@@ -128,7 +128,7 @@ const wordList = [
         hint: "You are wearing"
     },
     {
-        word: "SePone",
+        word: "sepone",
         hint: "He/She puts on"
     },
     {
@@ -136,35 +136,35 @@ const wordList = [
         hint: "He/she is wearing"
     },
     {
-        word: "MeQuedaBien",
+        word: "mequedabien",
         hint: "It fits me well"
     },
     {
-        word: "MeQuedaMal",
+        word: "mequedamal",
         hint: "It fits me poorly"
     },
     {
-        word: "LeQuedaBien",
+        word: "lequedabien",
         hint: "It fits them well"
     },
     {
-        word: "LeQuedaMal",
+        word: "lequedamal",
         hint: "It fits them poorly"
     },
     {
-        word: "MeQuedaGrande",
+        word: "mequedagrande",
         hint: "It fits me big"
     },
     {
-        word: "MeQuedaPequeno",
+        word: "mequedapequeno",
         hint: "It fits me small"
     },
     {
-        word: "LeQuedaGrande",
+        word: "lequedagrande",
         hint: "It fits them big"
     },
     {
-        word: "LeQuedaPequeno",
+        word: "lequedapequeno",
         hint: "It fits them small"
     },
 ]
