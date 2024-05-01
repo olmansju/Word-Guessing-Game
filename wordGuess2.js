@@ -90,6 +90,7 @@ const fileInput = document.getElementById('file-input');
 fileInput.addEventListener('change', handleFileSelect);
 
 async function handleFileSelect(event) {
+    let wordListArray = [];
     const file = await event.target.files[0];
     const reader = new FileReader();
 
@@ -98,13 +99,13 @@ async function handleFileSelect(event) {
         const lines = contents.split('\n');
 
         // Assuming each line contains a word and a hint separated by a comma
-        wordList = lines.map(line => {
+        lines.map(line => {
             const [word, hint] = line.split(',');
-            return { word: word.trim(), hint: hint.trim() };
+            wordListArray.push({ word: word.trim(), hint: hint.trim() });
         });
         
         console.log(wordList);
-        //wordList = customWordList; // Update the global wordList variable
+        wordList = wordListArray; // Update the global wordList variable
         randomWord(); 
     };
 
