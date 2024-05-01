@@ -89,16 +89,16 @@ const fileInput = document.getElementById('file-input');
 
 fileInput.addEventListener('change', handleFileSelect);
 
-function handleFileSelect(event) {
-    const file = event.target.files[0];
+async function handleFileSelect(event) {
+    const file = await event.target.files[0];
     const reader = new FileReader();
 
-    reader.onload = function(event) {
+    reader.onload = await function(event) {
         const contents = event.target.result;
         const lines = contents.split('\n');
 
         // Assuming each line contains a word and a hint separated by a comma
-        const wordList = lines.map(line => {
+        wordList = lines.map(line => {
             const [word, hint] = line.split(',');
             return { word: word.trim(), hint: hint.trim() };
         });

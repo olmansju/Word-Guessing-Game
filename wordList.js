@@ -1,4 +1,4 @@
-const wordList = [
+let wordList = [
     {
         word: "falda",
         hint: "skirt"
