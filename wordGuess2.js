@@ -3,7 +3,7 @@ hintTag = document.querySelector(".hint span"),
 guessLeft = document.querySelector(".guess-left span"),
 wrongLetter = document.querySelector(".wrong-letter span"),
 scoreDisplay = document.querySelector(".score span"),
-highScoreDisplay = document.getElementById("high-score"), // Added high score display
+highScoreDisplay = document.getElementById("high-score"),
 resetBtn = document.querySelector(".reset-btn"),
 typingInput = document.querySelector(".typing-input");
 
@@ -102,11 +102,53 @@ async function handleFileSelect(event) {
             const [word, hint] = line.split(',');
             return { word: word.trim(), hint: hint.trim() };
         });
-
-        // Now you have the wordList array with words and hints
-        // You can use this array to initialize your game or perform any other actions
+        
         console.log(wordList);
+        wordList = customWordList; // Update the global wordList variable
+        randomWord(); 
     };
 
     reader.readAsText(file);
 }
+// Using a modal
+const modal = document.getElementById("myModal");
+
+// Open the modal
+const openModalBtn = document.getElementById("open-modal-btn");
+
+// Close the modal
+const closeBtn = document.getElementsByClassName("close")[0];
+
+const customWordInput = document.getElementById('custom-word-input');
+
+openModalBtn.onclick = function() {
+  modal.style.display = "block";
+  customWordInput.focus(); // Set focus to the input field inside the modal ... not working ... 
+}
+
+// Close when user clicks on <span> (x)
+closeBtn.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Close when user clicks anywhere outside of the modal
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+// Function to add custom word
+const addWordBtn = document.getElementById('add-word-btn');
+
+addWordBtn.addEventListener('click', () => {
+    const inputText = customWordInput.value.trim();
+    const [word, hint] = inputText.split(',');
+    if (word && hint) {
+        wordList.push({ word: word.trim(), hint: hint.trim() });
+        customWordInput.value = '';
+        modal.style.display = "none";
+    } else {
+        alert('Please enter the word and hint separated by a comma.');
+    }
+});
