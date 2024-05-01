@@ -39,7 +39,7 @@ randomWord();
 function initGame(e) {
   let key = e.target.value.toLowerCase();
   if (
-    key.match(/^[A-Za-z]+$/) &&
+    key.match(/^[A-Za-záéíóúüñÁÉÍÓÚÜÑ]+$/) &&
     !incorrectLetters.includes(` ${key}`) &&
     !correctLetters.includes(key)
   ) {
@@ -104,7 +104,7 @@ async function handleFileSelect(event) {
         });
         
         console.log(wordList);
-        wordList = customWordList; // Update the global wordList variable
+        //wordList = customWordList; // Update the global wordList variable
         randomWord(); 
     };
 
